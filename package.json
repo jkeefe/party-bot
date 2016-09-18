@@ -1,0 +1,27 @@
+{
+  "name": "party-bot",
+  "version": "1.0.0",
+  "description": "Text a number to learn where the party's at. Uses AWS Lambda to field the calls and reply.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jkeefe/party-bot.git"
+  },
+  "author": "John Keefe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jkeefe/party-bot/issues"
+  },
+  "homepage": "https://github.com/jkeefe/party-bot#readme",
+  "devDependencies": {
+    "claudia": "^1.8.0"
+  },
+  "dependencies": {
+    "claudia-api-builder": "^1.6.0",
+    "mongodb": "^2.2.10",
+    "twilio": "^2.9.3"
+  }
+}
