@@ -4,7 +4,7 @@ var api = new ApiBuilder();
 
 module.exports = api;
 
-api.post('/question-bot', function(request){
+api.post('/party-bot', function(request){
   // bulding the reply (repsonse)
   // which first sends the request object to bot for processing
   return bot(request)

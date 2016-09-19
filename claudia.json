@@ -1,0 +1,11 @@
+{
+  "lambda": {
+    "role": "party-bot-executor",
+    "name": "party-bot",
+    "region": "us-east-1"
+  },
+  "api": {
+    "id": "f6546dnnnh",
+    "module": "lambda"
+  }
+}
