@@ -1,7 +1,7 @@
 // partyy-bot!
 
 var twilio = require('twilio');
-var mongodb = require('mongodb');
+var request = require('request');
 
 module.exports = function(request) {
   
@@ -9,7 +9,12 @@ module.exports = function(request) {
 
         // functional code goes in here
         
-        reply = formatReply("Woot! The party starts in the bar of The Roxy 6 pm Friday Sept. 30. Free later? Text again then to see if we've moved! Roxy: https://goo.gl/maps/Wiiuqn3uc1Q2");
+        request.get('http://www.whatever.com/my.csv', function (error, response, body) {
+    if (!error && response.statusCode == 200) {
+        var csv = body;
+        // Continue with your processing here.
+    }
+});
         
         fulfill(reply);
         
