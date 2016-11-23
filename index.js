@@ -3,21 +3,25 @@
 var twilio = require('twilio');
 var request = require('request');
 
-module.exports = function(request) {
+module.exports = function(req) {
   
     return new Promise(function(fulfill, reject){
 
         // functional code goes in here
         
-        request.get('http://www.whatever.com/my.csv', function (error, response, body) {
-    if (!error && response.statusCode == 200) {
-        var csv = body;
-        // Continue with your processing here.
-    }
-});
+        var filename = "https://raw.githubusercontent.com/jkeefe/party-bot/master/party.txt";
+        filename = filename + "?" + Math.random();
         
-        fulfill(reply);
-        
+        request.get(filename, function (error, response, body) {
+            if (!error && response.statusCode == 200) {
+                var reply = formatReply(body);
+                fulfill(reply);
+            } else {
+                console.log("Error getting text file:", error);
+                fulfill(null);
+            }
+        });
+                
     });
   
 };
