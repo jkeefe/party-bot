@@ -34,7 +34,16 @@ Note that I could get rid of a lot of this stuff by installing claudia globally,
 
 ### Secret & Environment Variables
 
-To store API keys and the like, set them as "stage variables," such as `MONGO_URL` in the AWS API Gateway. They then get passed to the function by lambda, and can be used like this:
+To store API keys and the like, set them as "stage variables," such as `MONGO_URL` in the AWS API Gateway. 
+
+- API Gateway >
+- [name of API] >
+- stages >
+- latest >
+- stage variables >
+- Add stage variable
+
+They then get passed to the function by lambda, and can be used like this:
   
 ```javascript
 var mongoKey = request.env.MONGO_URL;
