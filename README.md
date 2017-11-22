@@ -14,9 +14,9 @@ npm install claudia-api-builder --save
 npm install twilio mongodb --save
 ```
 
-Make sure a `lambda.js` file is in the directory tree. Here's a base  [example](https://gist.github.com/jkeefe/c013ea91f4cfaf95ecef2a51b9c77f13).
+Make sure a `lambda.js` file is in the directory tree. Here's a base  [example](https://gist.githubusercontent.com/jkeefe/c013ea91f4cfaf95ecef2a51b9c77f13/raw/56482f75615accb1b7360f51e94ce7ccc8a71640/lambda.js).
 
-Make sure to have an `index.js` file in the directory tree. Here's a base [example](https://gist.github.com/jkeefe/2e61f4a4ff1c25b09020ff27525d9f74).
+Make sure to have an `index.js` file in the directory tree. Here's a base [example](https://gist.githubusercontent.com/jkeefe/ebdb3cc1b3a704f4efb93adad76af284/raw/bd52173ca6d82a1dba4ab660730398b8bf93e422/index.js).
 
 To establish the function the first time:
 
@@ -29,8 +29,6 @@ Take note of the URL in the configuration json that's displayed when all is done
 To update the code all the billions of other times:
 
 `AWS_PROFILE=lambda-master ./node_modules/.bin/claudia update`
-
-Note that I could get rid of a lot of this stuff by installing claudia globally, which I should probably do.
 
 ### Secret & Environment Variables
 
